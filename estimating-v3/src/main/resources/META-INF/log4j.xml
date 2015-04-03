@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM-dd-yyyy HH:mm:ss,SSS} %5p [%t] %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="rollingFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/estimating-v2.log"/>
+  		<param name="MaxFileSize" value="30MB"/>
+    	<param name="MaxBackupIndex" value="10"/>
+    	<param name="Append" value="true"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM-dd-yyyy HH:mm:ss,SSS} %5p [%t] %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="org.springframework">
+		<level value="info" />
+	</logger>
+	
+	<!-- WARN:  not turn Channel log level to DEBUG -->
+	<!-- It hangs if sending a binary or huge message -->
+	<logger name="org.springframework.integration.channel">
+		<level value="info" />
+	</logger>
+	
+	<!-- Spring security -->
+	<logger name="org.springframework.jdbc">
+		<level value="info" />
+	</logger>
+
+	<!-- Spring security -->
+	<logger name="org.springframework.security">
+		<level value="info" />
+	</logger>
+	
+	<!-- Apache Axis -->
+	<logger name="org.apache.axis.transport.http.HTTPSender">
+		<level value="debug" />
+	</logger>
+	
+	<!-- Estimating -->
+	<logger name="com.estimating">
+		<level value="debug" />
+	</logger>
+	
+	<!-- EHCache replicate-->
+	<logger name="net.sf.ehcache.distribution.jgroups">
+		<level value="warn" />
+	</logger>
+	
+	<!-- EHCache replicate-->
+	<logger name="net.sf.ehcache">
+		<level value="debug" />
+	</logger>
+	
+	<!-- JGroups-->
+	<logger name="org.jgroups">
+		<level value="warn" />
+	</logger>
+	
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="rollingFileAppender" />
+	</root>
+	
+</log4j:configuration>

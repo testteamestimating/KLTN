@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="baseService" class="com.estimating.service.core.AbstractBaseService" abstract="true" >
+		<property name="estimatingConstants" ref="estimatingConstants"></property>
+	</bean>
+	
+	Property
+	<bean id="estimatingConstants" class="com.estimating.utils.EstimatingConstants"/>
+	
+	ServiceImpl
+	<bean id="customerServiceImpl" class="com.estimating.service.impl.CustomerServiceImpl" parent="baseService"/>
+	<bean id="departmentServiceImpl" class="com.estimating.service.impl.DepartmentServiceImpl" parent="baseService"/> -->
+</beans>
