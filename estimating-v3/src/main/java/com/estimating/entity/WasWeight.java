@@ -16,13 +16,13 @@ import javax.persistence.Table;
 public class WasWeight extends BaseEntity{
 private static final long serialVersionUID = 1L;
 	
-	@Column(name="asimple", nullable = false)
+	@Column(name="asimple", nullable = false, columnDefinition = "int default 0")
 	private int asimple;
 	
-	@Column(name="aaverage", nullable = false)
+	@Column(name="aaverage", nullable = false, columnDefinition = "int default 0")
 	private int aaverage;
 	
-	@Column(name="acomplex", nullable = false)
+	@Column(name="acomplex", nullable = false, columnDefinition = "int default 0")
 	private int acomplex;
 
 	@OneToOne

@@ -21,43 +21,43 @@ public class TcfWeight  extends BaseEntity	 {
 	@PrimaryKeyJoinColumn
 	private UsecasePoint usecasePoint;
 	
-	@Column(name="access_for_3_parties", nullable=false)
+	@Column(name="access_for_3_parties", nullable=false, columnDefinition = "int default 0")
 	private int accessFor3Parties;
 
-	@Column(name="complex_processing", nullable=false)
+	@Column(name="complex_processing", nullable=false, columnDefinition = "int default 0")
 	private int complexProcessing;
 
-	@Column(name="concurrent_use", nullable=false)
+	@Column(name="concurrent_use", nullable=false, columnDefinition = "int default 0")
 	private int concurrentUse;
 
-	@Column(name="distributed_system", nullable=false)
+	@Column(name="distributed_system", nullable=false, columnDefinition = "int default 0")
 	private int distributedSystem;
 
-	@Column(name="easy_to_change")
+	@Column(name="easy_to_change", nullable = false, columnDefinition = "int default 0")
 	private int easyToChange;
 
-	@Column(name="easy_to_installation", nullable=false)
+	@Column(name="easy_to_installation", nullable=false, columnDefinition = "int default 0")
 	private int easyToInstallation;
 
-	@Column(name="easy_to_use", nullable = false)
+	@Column(name="easy_to_use", nullable = false, columnDefinition = "int default 0")
 	private int easyToUse;
 
-	@Column(name="end_uses_efficiency", nullable=false)
+	@Column(name="end_uses_efficiency", nullable=false, columnDefinition = "int default 0")
 	private int endUsesEfficiency;
 
-	@Column(name="performance_objectives", nullable=false)
+	@Column(name="performance_objectives", nullable=false, columnDefinition = "int default 0")
 	private int performanceObjectives;
 
-	@Column(name="portable", nullable=false )
+	@Column(name="portable", nullable=false, columnDefinition = "int default 0")
 	private int portable;
 
-	@Column(name="reusable_code", nullable=false)
+	@Column(name="reusable_code", nullable=false, columnDefinition = "int default 0")
 	private int reusableCode;
 
-	@Column(name="special_security", nullable=false)
+	@Column(name="special_security", nullable=false, columnDefinition = "int default 0")
 	private int specialSecurity;
 
-	@Column(name="training_needs", nullable=false)
+	@Column(name="training_needs", nullable=false, columnDefinition = "int default 0")
 	private int trainingNeeds;
 
 	/**

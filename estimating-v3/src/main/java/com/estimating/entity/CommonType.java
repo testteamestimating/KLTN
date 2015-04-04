@@ -21,6 +21,10 @@ public class CommonType  extends BaseEntity {
 	@PrimaryKeyJoinColumn
 	private UsecasePointProperties usecasePointProperties;
 	
+	@OneToOne
+	@PrimaryKeyJoinColumn
+	private FunctionPointProperties functionPointProperties;
+	
 	@Column(name = "commonName", nullable = false, length = 50)
 	private String commonName;
 }

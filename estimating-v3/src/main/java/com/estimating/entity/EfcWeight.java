@@ -20,28 +20,28 @@ public class EfcWeight extends BaseEntity {
 	@PrimaryKeyJoinColumn
 	private UsecasePoint usecasePoint;
 	
-	@Column(name = "familiarwithDevelopmentProcess", nullable = false, length = 10)
+	@Column(name = "familiarwithDevelopmentProcess", nullable = false, length = 10, columnDefinition = "int default 0")
 	private int familiarwithDevelopmentProcess;
 	
-	@Column(name="applicationExperience", nullable = false, length = 10)
+	@Column(name="applicationExperience", nullable = false, length = 10, columnDefinition = "int default 0")
 	private int applicationExperience;
 	
-	@Column(name = "objectOrientedExperience", nullable = false, length = 10)
+	@Column(name = "objectOrientedExperience", nullable = false, length = 10, columnDefinition = "int default 0")
 	private int objectOrientedExperience;
 	
-	@Column(name = "leadAnalystCapability", nullable = false, length = 10)
+	@Column(name = "leadAnalystCapability", nullable = false, length = 10, columnDefinition = "int default 0")
 	private int leadAnalystCapability;
 	
-	@Column(name = "motivation", nullable = false, length = 10)
+	@Column(name = "motivation", nullable = false, length = 10, columnDefinition = "int default 0")
 	private int motivation;
 	
-	@Column(name = "stableRequirements", nullable = false, length = 10)
+	@Column(name = "stableRequirements", nullable = false, length = 10, columnDefinition = "int default 0")
 	private int stableRequirements;
 	
-	@Column(name = "parttimeStaff", nullable = false, length =10)
+	@Column(name = "parttimeStaff", nullable = false, length =10, columnDefinition = "int default 0")
 	private int parttimeStaff;
 	
-	@Column(name = "difficulProgrammingLanguage", nullable = false, length = 10)
+	@Column(name = "difficulProgrammingLanguage", nullable = false, length = 10, columnDefinition = "int default 0")
 	private int difficulProgrammingLanguage;
 
 	/**

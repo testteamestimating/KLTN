@@ -9,8 +9,10 @@ import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 
@@ -20,6 +22,10 @@ import javax.persistence.Table;
 @AttributeOverride(name = "id", column = @Column(name = "ucpId"))
 public class UsecasePoint  extends BaseEntity {
 	private static final long serialVersionUID = 1L;
+	
+	@ManyToOne
+	@PrimaryKeyJoinColumn
+	private Project project;
 	
 	@OneToOne
 	@JoinColumn(name="wusId")
@@ -40,31 +46,34 @@ public class UsecasePoint  extends BaseEntity {
 	@OneToMany(mappedBy = "usecasePoint")
 	private List<UsecasePointProperties> usecaseProperties;
 	
+	@Column(name = "version", nullable = false)
+	private int version;
+	
 	@Embedded
 	private DateEmbedded date;
 	
-	@Column(name = "wasPoint", nullable = false)
+	@Column(name = "wasPoint", nullable = false, columnDefinition = "double default 0.0")
 	private double wasPoint;
 	
-	@Column(name = "wusPoint", nullable =  false)
+	@Column(name = "wusPoint", nullable =  false, columnDefinition = "double default 0.0")
 	private double wusPoint;
 	
-	@Column(name = "tcfPoint", nullable = false)
+	@Column(name = "tcfPoint", nullable = false, columnDefinition = "double default 0.0")
 	private double tcfPoint;
 	
-	@Column(name = "efcPOint", nullable = false)
+	@Column(name = "efcPOint", nullable = false, columnDefinition = "double default 0.0")
 	private double efcPoint;
 	
-	@Column(name = "totalPoint", nullable = false)
+	@Column(name = "totalPoint", nullable = false, columnDefinition = "double default 0.0")
 	private double totalPoint;
 	
-	@Column(name = "totalCost", nullable = false)
+	@Column(name = "totalCost", nullable = false, columnDefinition = "double default 0.0")
 	private double totalCost;
 	
-	@Column(name = "totalHour", nullable = false)
+	@Column(name = "totalHour", nullable = false, columnDefinition = "double default 0.0")
 	private double totalHour;
 	
-	@Column(name = "payment", nullable = false)
+	@Column(name = "payment", nullable = false, columnDefinition = "double default 0.0")
 	private int payment;
 	
 	

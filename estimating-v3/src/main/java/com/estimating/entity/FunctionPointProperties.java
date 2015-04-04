@@ -10,21 +10,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "usecasePointProperties")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@AttributeOverride(name = "id", column = @Column(name = "ucppId"))
-public class UsecasePointProperties extends BaseEntity {
+@Entity 
+@Table(name = "functionPointProperties")
+@Inheritance(strategy  = InheritanceType.TABLE_PER_CLASS)
+@AttributeOverride(name = "id", column = @Column(name = "fppId"))
+public class FunctionPointProperties extends BaseEntity {
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne
-	@JoinColumn(name = "ucpId")
-	private UsecasePoint usecasePoint;
+	@JoinColumn(name = "fpId")
+	private FunctionPoint functionPoint;
 	
 	@OneToOne
-	@JoinColumn(name = "ucpType")
+	@JoinColumn(name = "fpType")
 	private CommonType commonType;
 	
-	@Column(name = "ucppName", nullable = false, length = 100)
-	private String ucppName;
+	@Column(name = "fppName", nullable = false, length = 100)
+	private String fppName;
 }

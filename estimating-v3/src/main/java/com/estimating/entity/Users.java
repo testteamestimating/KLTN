@@ -1,11 +1,15 @@
 package com.estimating.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,8 +27,35 @@ public class Users  implements Serializable {
 	@Embedded
 	private DateEmbedded date;
 
+	@ManyToOne
+	@JoinColumn(name = "utId")
+	private UserType userType;
+	
+	@OneToMany(mappedBy = "user")
+	private List<Project> project;
+	
+	/**
+	 * @return the project
+	 */
+	public List<Project> getProject() {
+		return project;
+	}
+
+
+
+	/**
+	 * @param project the project to set
+	 */
+	public void setProject(List<Project> project) {
+		this.project = project;
+	}
+
+
+
 	public Users() {
 	}
+	
+	
 	
 	/**
 	 * @return the username
@@ -74,6 +105,33 @@ public class Users  implements Serializable {
 		this.username = username;
 		this.password = password;
 		this.date = date;
+	}
+
+
+
+	/**
+	 * @return the userType
+	 */
+	public UserType getUserType() {
+		return userType;
+	}
+
+
+
+	/**
+	 * @param userType the userType to set
+	 */
+	public void setUserType(UserType userType) {
+		this.userType = userType;
+	}
+
+
+
+	/**
+	 * @return the serialversionuid
+	 */
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }
