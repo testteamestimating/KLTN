@@ -37,7 +37,7 @@ public class DaoTest {
 		
 	@Test
 	public void saveUserTest() {
-		Users user1 = new Users("hung5", "789", date);
+		Users user1 = new Users("long", "789", date);
 		userDao.create(user1);
 		Assert.assertNotNull(user1);
 	}

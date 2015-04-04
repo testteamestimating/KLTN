@@ -5,8 +5,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -25,9 +25,10 @@ private static final long serialVersionUID = 1L;
 	@Column(name="acomplex", nullable = false)
 	private int acomplex;
 
-	 @ManyToOne
-	 @JoinColumn(name="ucpId")
+	@OneToOne
+	@PrimaryKeyJoinColumn
 	private UsecasePoint usecasePoint;
+	
 	/**
 	 * @return the asimple
 	 */
@@ -71,7 +72,9 @@ private static final long serialVersionUID = 1L;
 	}
 
 	public WasWeight() {
-		
+		this.asimple = 0;
+		this.aaverage = 0;
+		this.acomplex = 0;
 	}
 	
 	public WasWeight(int asimple, int aaverage, int acpmplex) {
@@ -79,5 +82,19 @@ private static final long serialVersionUID = 1L;
 		this.asimple = asimple;
 		this.aaverage = aaverage;
 		this.acomplex = acpmplex;
+	}
+
+	/**
+	 * @return the usecasePoint
+	 */
+	public UsecasePoint getUsecasePoint() {
+		return usecasePoint;
+	}
+
+	/**
+	 * @param usecasePoint the usecasePoint to set
+	 */
+	public void setUsecasePoint(UsecasePoint usecasePoint) {
+		this.usecasePoint = usecasePoint;
 	}
 }

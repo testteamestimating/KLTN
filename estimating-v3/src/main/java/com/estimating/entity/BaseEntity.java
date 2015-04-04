@@ -14,10 +14,10 @@ public abstract class BaseEntity implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private long id;
+	@Column(name = "id", length=10)
+	private int id;
 
-	public long getId() {
+	public int getId() {
 		return this.id;
 	}
 }

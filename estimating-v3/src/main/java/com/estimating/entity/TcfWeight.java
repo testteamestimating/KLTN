@@ -5,18 +5,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tcfWeight")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@AttributeOverride(name = "id", column = @Column(name = "customer_id"))
-@JsonIgnoreProperties("customers")
+@AttributeOverride(name = "id", column = @Column(name = "tcfId"))
 public class TcfWeight  extends BaseEntity	 {
 	
 	private static final long serialVersionUID = 1L;
+	
+	@OneToOne
+	@PrimaryKeyJoinColumn
+	private UsecasePoint usecasePoint;
 	
 	@Column(name="access_for_3_parties", nullable=false)
 	private int accessFor3Parties;
@@ -36,7 +39,7 @@ public class TcfWeight  extends BaseEntity	 {
 	@Column(name="easy_to_installation", nullable=false)
 	private int easyToInstallation;
 
-	@Column(name="easy_to_use")
+	@Column(name="easy_to_use", nullable = false)
 	private int easyToUse;
 
 	@Column(name="end_uses_efficiency", nullable=false)
@@ -56,6 +59,75 @@ public class TcfWeight  extends BaseEntity	 {
 
 	@Column(name="training_needs", nullable=false)
 	private int trainingNeeds;
+
+	/**
+	 * @return the usecasePoint
+	 */
+	public UsecasePoint getUsecasePoint() {
+		return usecasePoint;
+	}
+
+	/**
+	 * @param usecasePoint the usecasePoint to set
+	 */
+	public void setUsecasePoint(UsecasePoint usecasePoint) {
+		this.usecasePoint = usecasePoint;
+	}
+
+	/**
+	 * @param accessFor3Parties
+	 * @param complexProcessing
+	 * @param concurrentUse
+	 * @param distributedSystem
+	 * @param easyToChange
+	 * @param easyToInstallation
+	 * @param easyToUse
+	 * @param endUsesEfficiency
+	 * @param performanceObjectives
+	 * @param portable
+	 * @param reusableCode
+	 * @param specialSecurity
+	 * @param trainingNeeds
+	 */
+	public TcfWeight(int accessFor3Parties, int complexProcessing,
+			int concurrentUse, int distributedSystem, int easyToChange,
+			int easyToInstallation, int easyToUse, int endUsesEfficiency,
+			int performanceObjectives, int portable, int reusableCode,
+			int specialSecurity, int trainingNeeds) {
+		super();
+		this.accessFor3Parties = accessFor3Parties;
+		this.complexProcessing = complexProcessing;
+		this.concurrentUse = concurrentUse;
+		this.distributedSystem = distributedSystem;
+		this.easyToChange = easyToChange;
+		this.easyToInstallation = easyToInstallation;
+		this.easyToUse = easyToUse;
+		this.endUsesEfficiency = endUsesEfficiency;
+		this.performanceObjectives = performanceObjectives;
+		this.portable = portable;
+		this.reusableCode = reusableCode;
+		this.specialSecurity = specialSecurity;
+		this.trainingNeeds = trainingNeeds;
+	}
+
+	/**
+	 * 
+	 */
+	public TcfWeight() {
+		this.accessFor3Parties = 0;
+		this.complexProcessing = 0;
+		this.concurrentUse = 0;
+		this.distributedSystem = 0;
+		this.easyToChange = 0;
+		this.easyToInstallation = 0;
+		this.easyToUse = 0;
+		this.endUsesEfficiency = 0;
+		this.performanceObjectives = 0;
+		this.portable = 0;
+		this.reusableCode = 0;
+		this.specialSecurity = 0;
+		this.trainingNeeds = 0;
+	}
 
 	/**
 	 * @return the accessFor3Parties

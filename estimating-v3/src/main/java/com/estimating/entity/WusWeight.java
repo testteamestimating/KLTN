@@ -19,7 +19,7 @@ public class WusWeight  extends BaseEntity {
 	
 	@OneToOne
 	@PrimaryKeyJoinColumn
-	private UsecasePoint ucp;
+	private UsecasePoint usecasePoint;
 	
 	@Column(name="usimple", nullable = false)
 	private int usimple;
@@ -73,7 +73,9 @@ public class WusWeight  extends BaseEntity {
 	}
 	
 	public WusWeight() {
-		
+		this.usimple = 0;
+		this.uaverage = 0;
+		this.ucomplex = 0;
 	}
 	
 	public WusWeight(int usimple, int uaverage, int ucpmplex) {
@@ -81,5 +83,19 @@ public class WusWeight  extends BaseEntity {
 		this.usimple = usimple;
 		this.uaverage = uaverage;
 		this.ucomplex = ucpmplex;
+	}
+
+	/**
+	 * @return the usecasePoint
+	 */
+	public UsecasePoint getUsecasePoint() {
+		return usecasePoint;
+	}
+
+	/**
+	 * @param usecasePoint the usecasePoint to set
+	 */
+	public void setUsecasePoint(UsecasePoint usecasePoint) {
+		this.usecasePoint = usecasePoint;
 	}
 }
