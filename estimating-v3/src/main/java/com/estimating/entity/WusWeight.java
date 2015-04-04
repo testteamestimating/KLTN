@@ -21,13 +21,13 @@ public class WusWeight  extends BaseEntity {
 	@PrimaryKeyJoinColumn
 	private UsecasePoint usecasePoint;
 	
-	@Column(name="usimple", nullable = false)
+	@Column(name="usimple", nullable = false, columnDefinition = "int default 0")
 	private int usimple;
 	
-	@Column(name="uaverage", nullable = false)
+	@Column(name="uaverage", nullable = false, columnDefinition = "int default 0")
 	private int uaverage;
 	
-	@Column(name="ucomplex", nullable = false)
+	@Column(name="ucomplex", nullable = false, columnDefinition = "int default 0")
 	private int ucomplex;
 
 	/**
