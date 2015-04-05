@@ -10,23 +10,25 @@
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
 		<!-- None security resources -->
+		<http pattern="/include/**" security="none"/>
 		<http pattern="/css/**" security="none"/>
 	  	<http pattern="/images/**" security="none"/>
 	  	<http pattern="/js/**" security="none"/>
 	  	<http pattern="/lib/**" security="none"/>
+	  	<http pattern="/views/include/**" security="none"/>
 		<http auto-config="true" use-expressions="true">
 
 		<!-- PermitAll -->
 		<intercept-url pattern="/login" access="permitAll" />
 		<intercept-url pattern="/homepage" access="permitAll" />
-		<intercept-url pattern="/customers/**" access="permitAll" />
+		<intercept-url pattern="/**" access="permitAll" />
 	
 		<!-- ROLE_ADMIN -->
 
 		<!-- ROLE_USER -->
 
 		<!-- hasAnyRole -->
-		<intercept-url pattern='/**' access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+		<!-- <intercept-url pattern='/**' access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" /> -->
 
 		
 		<form-login login-page="/homepage" default-target-url="/mainpage"

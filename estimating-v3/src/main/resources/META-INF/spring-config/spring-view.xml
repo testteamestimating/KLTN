@@ -13,6 +13,7 @@
     <mvc:annotation-driven/>
     
     <!-- Resources -->
+    <mvc:resources mapping="/include/**" location="/include/" />
     <mvc:resources mapping="/views/**" location="/views/" />
     <mvc:resources mapping="/css/**" location="/css/"/>
     <mvc:resources mapping="/images/**" location="/images/"/>
