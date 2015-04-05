@@ -22,6 +22,7 @@ import com.estimating.entity.Users;
 public class DaoTest {
 	@Autowired IUsersDao userDao;
 	
+	@SuppressWarnings("unused")
 	private ApplicationContext context;
 	
 	private DateEmbedded date;

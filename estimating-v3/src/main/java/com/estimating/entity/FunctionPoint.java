@@ -90,6 +90,35 @@ public class FunctionPoint extends BaseEntity {
 	private int payment;
 
 	/**
+	 * @return the project
+	 */
+	public Project getProject() {
+		return project;
+	}
+
+	/**
+	 * @param project the project to set
+	 */
+	public void setProject(Project project) {
+		this.project = project;
+	}
+
+	/**
+	 * @return the funtionPointProperties
+	 */
+	public List<FunctionPointProperties> getFuntionPointProperties() {
+		return funtionPointProperties;
+	}
+
+	/**
+	 * @param funtionPointProperties the funtionPointProperties to set
+	 */
+	public void setFuntionPointProperties(
+			List<FunctionPointProperties> funtionPointProperties) {
+		this.funtionPointProperties = funtionPointProperties;
+	}
+
+	/**
 	 * @param eiWeight
 	 * @param ilfWeight
 	 * @param eoWeight
@@ -109,11 +138,61 @@ public class FunctionPoint extends BaseEntity {
 	 * @param totalHour
 	 * @param payment
 	 */
-	public FunctionPoint(int version, DateEmbedded date,
+	/*public FunctionPoint(int version, DateEmbedded date,
 			double eiPoint, double lifPoint, double eoPoint, double upPoint,
 			double eifPoint, double vafPoint, double totalPoint,
 			double totalCost, double totalHour, int payment) {
 		super();
+		this.version = version;
+		this.date = date;
+		this.eiPoint = eiPoint;
+		this.lifPoint = lifPoint;
+		this.eoPoint = eoPoint;
+		this.upPoint = upPoint;
+		this.eifPoint = eifPoint;
+		this.vafPoint = vafPoint;
+		this.totalPoint = totalPoint;
+		this.totalCost = totalCost;
+		this.totalHour = totalHour;
+		this.payment = payment;
+	}*/
+
+	/**
+	 * @param project
+	 * @param eiWeight
+	 * @param eoWeight
+	 * @param ilfWeight
+	 * @param eqWeight
+	 * @param eifWeight
+	 * @param vafWeight
+	 * @param funtionPointProperties
+	 * @param version
+	 * @param date
+	 * @param eiPoint
+	 * @param lifPoint
+	 * @param eoPoint
+	 * @param upPoint
+	 * @param eifPoint
+	 * @param vafPoint
+	 * @param totalPoint
+	 * @param totalCost
+	 * @param totalHour
+	 * @param payment
+	 */
+	public FunctionPoint(Project project, EiWeight eiWeight, EoWeight eoWeight,
+			IlfWeight ilfWeight, EqWeight eqWeight, EifWeight eifWeight,
+			VafWeight vafWeight, int version,
+			DateEmbedded date, double eiPoint, double lifPoint, double eoPoint,
+			double upPoint, double eifPoint, double vafPoint,
+			double totalPoint, double totalCost, double totalHour, int payment) {
+		super();
+		this.project = project;
+		this.eiWeight = eiWeight;
+		this.eoWeight = eoWeight;
+		this.ilfWeight = ilfWeight;
+		this.eqWeight = eqWeight;
+		this.eifWeight = eifWeight;
+		this.vafWeight = vafWeight;
 		this.version = version;
 		this.date = date;
 		this.eiPoint = eiPoint;

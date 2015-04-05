@@ -15,6 +15,19 @@ import javax.persistence.Table;
 @Inheritance(strategy  = InheritanceType.TABLE_PER_CLASS)
 @AttributeOverride(name = "id", column = @Column(name = "fppId"))
 public class FunctionPointProperties extends BaseEntity {
+	/**
+	 * @param functionPoint
+	 * @param commonType
+	 * @param fppName
+	 */
+	public FunctionPointProperties(FunctionPoint functionPoint,
+			CommonType commonType, String fppName) {
+		super();
+		this.functionPoint = functionPoint;
+		this.commonType = commonType;
+		this.fppName = fppName;
+	}
+
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne

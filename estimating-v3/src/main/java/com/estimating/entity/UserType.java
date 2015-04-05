@@ -10,8 +10,6 @@ import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.springframework.security.core.userdetails.User;
-
 @Entity
 @Table(name= "userType")
 @Inheritance(strategy  = InheritanceType.TABLE_PER_CLASS)
