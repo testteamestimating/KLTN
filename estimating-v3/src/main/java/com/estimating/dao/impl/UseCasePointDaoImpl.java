@@ -5,13 +5,12 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import com.estimating.dao.core.AbstractBaseDao;
-import com.estimating.dao.core.IUsersDao;
-import com.estimating.entity.Users;
+import com.estimating.entity.UsecasePoint;
 
 @Repository
 @Transactional
-public class UserImpl  extends AbstractBaseDao<Users> implements IUsersDao {
-	public UserImpl() {
-		super(Users.class);
+public class UseCasePointDaoImpl  extends AbstractBaseDao<UsecasePoint> {
+	public UseCasePointDaoImpl() {
+		super(UsecasePoint.class);
 	}
 }
