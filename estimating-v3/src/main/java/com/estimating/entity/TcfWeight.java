@@ -114,19 +114,7 @@ public class TcfWeight  extends BaseEntity	 {
 	 * 
 	 */
 	public TcfWeight() {
-		this.accessFor3Parties = 0;
-		this.complexProcessing = 0;
-		this.concurrentUse = 0;
-		this.distributedSystem = 0;
-		this.easyToChange = 0;
-		this.easyToInstallation = 0;
-		this.easyToUse = 0;
-		this.endUsesEfficiency = 0;
-		this.performanceObjectives = 0;
-		this.portable = 0;
-		this.reusableCode = 0;
-		this.specialSecurity = 0;
-		this.trainingNeeds = 0;
+		super();
 	}
 
 	/**

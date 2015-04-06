@@ -31,7 +31,6 @@ import com.estimating.dao.core.IVafWeightDao;
 import com.estimating.dao.core.IWasWeightDao;
 import com.estimating.dao.core.IWusWeightDao;
 import com.estimating.dao.core.PersistenceContext;
-import com.estimating.dao.impl.FunctionPointPropertiesDaoImpl;
 import com.estimating.entity.CommonType;
 import com.estimating.entity.DateEmbedded;
 import com.estimating.entity.EfcWeight;
@@ -42,10 +41,14 @@ import com.estimating.entity.EqWeight;
 import com.estimating.entity.FunctionPoint;
 import com.estimating.entity.IlfWeight;
 import com.estimating.entity.Project;
+import com.estimating.entity.ProjectType;
+import com.estimating.entity.TcfWeight;
+import com.estimating.entity.UsecasePoint;
+import com.estimating.entity.UsecasePointProperties;
+import com.estimating.entity.UserType;
 import com.estimating.entity.VafWeight;
 import com.estimating.entity.WasWeight;
 import com.estimating.entity.WusWeight;
-import com.mysql.fabric.xmlrpc.base.Array;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { PersistenceContext.class , TestConfig.class})
@@ -68,7 +71,7 @@ public class AddData {
 	@Autowired IUseCasePointDao ucpDao;
 	@Autowired IUsecasePointPropertiesDao ucppDao;
 	@Autowired IUserTypeDao utDao;
-	@Autowired IVafWeightDao Dao;
+	@Autowired IVafWeightDao vafDao;
 	
 	@SuppressWarnings("unused")
 	private ApplicationContext context;
@@ -197,11 +200,11 @@ public class AddData {
 		while(i<10) {
 			//lst.add(new FunctionPoint(1,date,i+6.6,i+8.6,i+8.6,i+4.9,i+7.8,i+9.3,i+7.9,i+6.8,i+8.8,i*1000+12000));
 			lstProject.add(new Project());
-			lstEiWeight.add(new EiWeight());
-			lstEoWeight.add(new EoWeight());
-			lstIlfWeight.add(new IlfWeight());
-			lstEqWeight.add(new EqWeight());
-			lstEifWeight.add(new EifWeight());
+			lstEiWeight.add(new EiWeight(1,2,3));
+			lstEoWeight.add(new EoWeight(1,2,3));
+			lstIlfWeight.add(new IlfWeight(1,2,3));
+			lstEqWeight.add(new EqWeight(1,2,3));
+			lstEifWeight.add(new EifWeight(1,2,3));
 			lstVafWeight.add(new VafWeight());
 			lst.add(new FunctionPoint(lstProject.get(i), lstEiWeight.get(i), lstEoWeight.get(i), lstIlfWeight.get(i), lstEqWeight.get(i), lstEifWeight.get(i), 
 					lstVafWeight.get(i), i+1, date, i+55.6, i+87.9, i+87.9 , i+87.9, i+87.9, i+87.9, i+87.9, i+87.9, i+87.9, i+80));
@@ -212,8 +215,100 @@ public class AddData {
 		}
 	}
 	
-	@Test
+/*	@Test
 	public void addFuntionPointPro() {
 		FunctionPointPropertiesDaoImpl a = new 
+	}*/
+	
+	@Test
+	public void addIlfWeight() {
+		ArrayList<IlfWeight> lst = new ArrayList<IlfWeight>();
+		int i=0;
+		while (i<10) {
+			lst.add(new IlfWeight(i+6,i+3,i+8));
+			ilfDao.create(lst.get(i));
+			i++;
+		}
+	}
+	
+	@Test
+	public void addProject() {
+		ArrayList<Project> lst = new ArrayList<Project>();
+		int i=0;
+		while(i<10) {
+			String pname = "project_" + i;
+			String desc = "description of project_" + i;
+			lst.add(new Project(pname, desc));
+			pDao.create(lst.get(i));
+			i++;
+		}
+	}
+	
+	@Test
+	public void addProjectType() {
+		ArrayList<ProjectType> lst = new ArrayList<ProjectType>();
+		int i = 0;
+		while(i<10) {
+			String pname = "type_" + i;
+			String desc = "description of project type_" + i;
+			lst.add(new ProjectType(pname, desc));
+			ptDao.create(lst.get(i));
+			i++;
+		}
+	}
+	
+	@Test
+	public void addTcfWEight() {	
+		ArrayList<TcfWeight> lst = new ArrayList<TcfWeight>();
+		int i = 0;
+		while(i<10) {
+			 lst.add(new TcfWeight(i+1, i+2, i+4, i+7, i+12, i+9, i+8, i+6, i+2, i+5, i+11, i+12, i+3));
+			 tcfDao.create(lst.get(i));
+			 i++;
+		}
+	}
+	
+	@Test
+	public void addUsecasePoint() {
+		ArrayList<UsecasePoint> lst = new ArrayList<UsecasePoint>();
+		int i = 0;
+		while(i<10) {
+			lst.add(new UsecasePoint(i, date, i+1, i+54.7, i+22.6, i+99.12, i+56.8, i+44.9, i+45.3, i*100+12000));
+			ucpDao.create(lst.get(i));
+			i++;
+		}
+	}
+	
+	//*
+	@Test
+	public void addUsecasePointProerties() {
+		ArrayList<UsecasePointProperties> lst = new ArrayList<UsecasePointProperties>();
+		int i= 0;
+		while(i<10) {
+			//lst.add(new UsecasePointProperties(usecasePoint, commonType, ucppName))
+		}
+	}
+	
+	@Test
+	public void addUserType() {
+		ArrayList<UserType> lst = new ArrayList<UserType>();
+		int i = 0;
+		while(i<10) {
+			String des = "user type " + i;
+			lst.add(new UserType(des));
+			utDao.create(lst.get(i));
+			i++;
+		}
+	}
+	
+	@Test
+	public void addVafWeight() {
+		ArrayList<VafWeight> lst = new ArrayList<VafWeight>();
+		int i = 0;
+		while(i<10) {
+			lst.add(new VafWeight(i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+11, i+6, i+2, i+5, i+6));
+			vafDao.create(lst.get(i));
+			i++;
+		}
 	}
 }

@@ -25,4 +25,70 @@ public class ProjectType extends BaseEntity {
 	
 	@OneToMany(mappedBy = "projectType")
 	private List<Project> project;
+
+	/**
+	 * @param typeName
+	 * @param descripton
+	 */
+	public ProjectType(String typeName, String descripton) {
+		super();
+		this.typeName = typeName;
+		this.descripton = descripton;
+	}
+
+	/**
+	 * 
+	 */
+	public ProjectType() {
+		super();
+	}
+
+	/**
+	 * @return the typeName
+	 */
+	public String getTypeName() {
+		return typeName;
+	}
+
+	/**
+	 * @param typeName the typeName to set
+	 */
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	/**
+	 * @return the descripton
+	 */
+	public String getDescripton() {
+		return descripton;
+	}
+
+	/**
+	 * @param descripton the descripton to set
+	 */
+	public void setDescripton(String descripton) {
+		this.descripton = descripton;
+	}
+
+	/**
+	 * @return the project
+	 */
+	public List<Project> getProject() {
+		return project;
+	}
+
+	/**
+	 * @param project the project to set
+	 */
+	public void setProject(List<Project> project) {
+		this.project = project;
+	}
+
+	/**
+	 * @return the serialversionuid
+	 */
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 }
