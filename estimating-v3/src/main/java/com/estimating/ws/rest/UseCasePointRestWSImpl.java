@@ -10,4 +10,6 @@ public class UseCasePointRestWSImpl extends AbstractRestService implements IUseC
 		Double result = restTemplate.postForObject(url, wusWeightBean, Double.class);
 		return result;
 	}
+	
+	
 }

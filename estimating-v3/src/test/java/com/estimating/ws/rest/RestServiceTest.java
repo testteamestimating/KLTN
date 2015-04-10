@@ -28,6 +28,6 @@ public class RestServiceTest {
 	@Test
 	public void calWusWeigthTest() {
 		double result = useCasePointRestWS.calWusWeight(wusWeightBean);
-		Assert.assertEquals(String.valueOf("6.0"), String.valueOf(result));
+		Assert.assertEquals(String.valueOf("39.0"), String.valueOf(result));
 	}
 }

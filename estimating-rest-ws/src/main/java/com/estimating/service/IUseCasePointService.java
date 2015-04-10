@@ -12,5 +12,7 @@ public interface IUseCasePointService {
 	public double calWasWeight(WasWeightBean wasWeightBean);
 	public double calTcfWeight(TcfWeightBean tcfWeightBean);
 	public double calEfcWeight(EfcWeightBean efcWeightBean);
-	public double calUsecasePoint(UsecasePointBean usecasePointBean);
+	public double calTotalPoint(UsecasePointBean usecasePointBean);
+	public double calTotalHour(UsecasePointBean usecasePointBean);
+	public double calTotalCost(UsecasePointBean usecasePointBean);
 }
