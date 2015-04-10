@@ -35,6 +35,24 @@ public class Users  implements Serializable {
 	private List<Project> project;
 	
 	/**
+	 * @param username
+	 * @param password
+	 * @param date
+	 * @param userType
+	 * @param project
+	 */
+	public Users(String username, String password, DateEmbedded date,
+			UserType userType) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.date = date;
+		this.userType = userType;
+	}
+
+
+
+	/**
 	 * @return the project
 	 */
 	public List<Project> getProject() {

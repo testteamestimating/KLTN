@@ -6,6 +6,6 @@ public interface IBaseDao<T> {
 	void create(T entity);
 	void update(T entity);
 	void remove(T entity);
-	T findOneById(Long primaryKey);
+	T findOneById(int primaryKey);
 	List<T> findAll();
 }

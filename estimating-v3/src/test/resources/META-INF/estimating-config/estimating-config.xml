@@ -5,4 +5,5 @@
 	<!-- Import Resources -->
 	<import resource="classpath*:META-INF/estimating-config/estimating-*-config.xml"/>
 	<import resource="classpath*:META-INF/estimating-config/estimating-queries-*.xml"/>
+	<import resource="classpath*:META-INF/estimating-config/estimating-ws-*.xml"/>
 </beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="baseRestService" class="com.estimating.ws.rest.AbstractRestService" abstract="true" >
+		<property name="restTemplate" ref="restTemplate"></property>
+	</bean>
+	
+	<!-- Property -->
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+	
+	<!-- ServiceImpl -->
+	<bean id="useCasePointRestWS" class="com.estimating.ws.rest.UseCasePointRestWSImpl" parent="baseRestService"/>
+</beans>

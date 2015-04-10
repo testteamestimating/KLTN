@@ -72,7 +72,7 @@ public abstract class AbstractBaseDao<T> implements IBaseDao<T> {
 	 * @param primaryKey
 	 * @return only entity from parameter
 	 */
-	public T findOneById(Long primaryKey) {
+	public T findOneById(int primaryKey) {
 		return this.entityManager.find(entityClass, primaryKey);
 	}
 
