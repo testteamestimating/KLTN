@@ -20,6 +20,7 @@ public class FunctionPointBean {
 	private double eiPoint;
 	private double lifPoint;
 	private double eoPoint;
+	private double eqPoint;
 	private double upPoint;
 	private double eifPoint;
 	private double vafPoint;
@@ -27,6 +28,7 @@ public class FunctionPointBean {
 	private double totalCost;
 	private double totalHour;
 	private int payment;
+	
 	/**
 	 * @param functionPointId
 	 * @param eiWeight
