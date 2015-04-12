@@ -1,1 +1,664 @@
-<h1>Function Point Calculator UI in here</h1>
+<div class="row">
+	<div class="col-md-4">
+		<ul class="ver-inline-menu tabbable margin-bottom-10">
+			<li class="active">
+				<a data-toggle="tab" href="#tab_1">
+				<i class="fa fa-briefcase"></i> Select or create project </a>
+				<span class="after">
+				</span>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab_2">
+				<i class="fa fa-group"></i> External Inputs </a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab_3">
+				<i class="fa fa-leaf"></i> External Outputs </a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab_4">
+				<i class="fa fa-info-circle"></i> External Online Queries </a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab_5">
+				<i class="fa fa-tint"></i> Internal Logical Files </a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab_6">
+				<i class="fa fa-plus"></i> External Interface Files </a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab_7">
+				<i class="fa fa-plus"></i> Relative Complexity Adjustment Factors </a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab_8">
+				<i class="fa fa-plus"></i> Confirm Result </a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-8">
+		<div class="tab-content">
+			<div id="tab_1" class="tab-pane active">
+				<div id="accordion1" class="panel-group">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1">
+							Choose already exists project or create new </p>
+							</h4>
+						</div>
+						<div id="accordion1_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+								 <div class="form-group">
+									<label class="control-label col-md-3">Peoject's name:</label>
+									<div class="col-md-5">
+										<select class="form-control select2me" data-placeholder="Select...">
+											<option value="AL">Alabama</option>
+											<option value="WY">Wyoming</option>
+											<option value="WY">long</option>
+											<option value="WY">hung</option>
+											<option value="WY">hunh</option>
+										</select>
+										<span class="help-block">
+										Chose project </span>
+									</div>
+									<a href="javascript:;" class="btn green">
+									Create <i class="fa fa-plus"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- begin tab ei -->
+			<div id="tab_2" class="tab-pane">
+				<div id="accordion2" class="panel-group">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+							External Inputs </p>
+							</h4>
+						</div>
+						<div id="accordion2_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+							<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Simple</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								    
+								      <tr>
+								        <td><input name="name" placeholder="External Input Simple"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Average</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Input Average"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Complex</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Input Complex"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  end tab ei -->
+			<!-- begin tab eo  -->
+			<div id="tab_3" class="tab-pane">
+				<div id="accordion2" class="panel-group">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+							External Outputs </p>
+							</h4>
+						</div>
+						<div id="accordion2_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+							<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Simple</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								    
+								      <tr>
+								        <td><input name="name" placeholder="External Output Simple"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Average</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Output Average"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Complex</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Output Complex"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end tab eo -->
+			<!-- begin tab eq -->
+			<div id="tab_4" class="tab-pane">
+				<div id="accordion2" class="panel-group">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+							External Online Queries </p>
+							</h4>
+						</div>
+						<div id="accordion2_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+							<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Simple</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								    
+								      <tr>
+								        <td><input name="name" placeholder="External Online Query Simple"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Average</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Online Query Average"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Complex</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Online Query Complex"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end tab eq -->
+			<!-- begin tab ilf -->
+			<div id="tab_5" class="tab-pane">
+				<div id="accordion2" class="panel-group">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+							Internal Logical Files </p>
+							</h4>
+						</div>
+						<div id="accordion2_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+							<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Simple</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								    
+								      <tr>
+								        <td><input name="name" placeholder="Internal Logical File Simple"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Average</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="Internal Logical File Average"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Complex</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="Internal Logical File Complex"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end tab ilf  -->
+			<!-- begin tab eif -->
+			<div id="tab_6" class="tab-pane">
+				<div id="accordion2" class="panel-group">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+							External Interface Files </p>
+							</h4>
+						</div>
+						<div id="accordion2_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+							<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Simple</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								    
+								      <tr>
+								        <td><input name="name" placeholder="External Interface File Simple"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Average</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Interface File Average"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Complex</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name" placeholder="External Interface File Complex"></td>
+								        <td>
+								          <span data-remove><a href="#">D</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end tab eif -->
+			<!-- begin tab rcaf -->
+			<div id="tab_7" class="tab-pane">
+				<div id="accordion2" class="panel-group">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+							Relative Complexity Adjustment Factor </p>
+							</h4>
+						</div>
+						<div id="accordion2_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+							<table class="table table-hover table-striped">
+								    <tbody>
+								      <tr>
+								        <td>Does the system require reliable backup and recovery?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Are data communications required?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Are there distributed processing functions?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Is performance critical?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Will the system run in an existing, heavily utilized operational environment?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Does the system require on-line data entry?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Does the on-line data entry require the input
+											transaction to be built over multiple screens or operations?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Are the master files updated on-line?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Are the inputs, outputs, files or inquiries complex?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Is the internal processing complex?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Is the code to be designed reusable?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Are conversion and installation included in the design?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Is the system designed for multiple installations in different organizations?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td>Is the application designed to facilitate change and ease of use by the user?</td>
+								        <td>
+								        	<select class="bs-select form-control input-small" data-style="blue">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+											</select>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end tab rcaf -->
+			<!-- begin tab result -->
+			<div id="tab_8" class="tab-pane">
+				<div id="accordion2" class="panel-group">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+							Confirm Result </p>
+							</h4>
+						</div>
+						<div id="accordion2_1" class="panel-collapse collapse in">
+							<div class="panel-body">
+							<table class="table table-hover table-striped">
+							<tr>
+								<div class="form-group form-md-line-input">
+											<div class="col-md-10">
+												<input type="text" class="form-control" id="form_control_1" placeholder="Enter wage per hour for your engineers">
+												<div class="form-control-focus">
+												</div>
+											</div>
+										</div>
+							</tr>
+							<tr>
+								<div class="portlet-body util-btn-margin-bottom-5">
+													<div class="clearfix">
+														<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+														<button type="button" class="btn btn-primary">Preview</button>
+														<!-- Indicates a successful or positive action -->
+														<button type="button" class="btn btn-success">Save</button>
+														<!-- Contextual button for informational alert messages -->
+														<button type="button" class="btn btn-info">Cancel</button>
+													</div>
+							</tr>
+							<tr>
+								<td>Total points</td>
+								<td>50.00</td>
+							</tr>
+							<tr>
+								<td>Total hours</td>
+								<td>1000.00</td>
+							</tr>
+							<tr>
+								<td>Total cost</td>
+								<td>3000</td>
+							</tr>
+							</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end tab result -->
+		</div>
+	</div>
+</div>
