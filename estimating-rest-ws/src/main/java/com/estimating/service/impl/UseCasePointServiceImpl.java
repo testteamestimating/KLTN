@@ -20,8 +20,8 @@ public class UseCasePointServiceImpl implements IUseCasePointService {
 	@Override
 	public double calWusWeight(WusWeightBean wusWeightBean) {
 		return wusWeightBean.getUsimple() * WusWeightEnum.USE_CASE_SIMPLE.getValue()
-				+ wusWeightBean.getUcomplex() * WusWeightEnum.USE_CASE_AVERAGE.getValue()
-				+ wusWeightBean.getUaverage() * WasWeightEnum.ACTOR_COMPLEX.getValue();
+				+ wusWeightBean.getUaverage() * WusWeightEnum.USE_CASE_AVERAGE.getValue()
+				+ wusWeightBean.getUcomplex() * WasWeightEnum.ACTOR_COMPLEX.getValue();
 	}
 
 	@Override

@@ -11,5 +11,4 @@ public class UseCasePointRestWSImpl extends AbstractRestService implements IUseC
 		return result;
 	}
 	
-	
 }

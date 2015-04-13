@@ -3,29 +3,29 @@
 		<ul class="ver-inline-menu tabbable margin-bottom-10">
 			<li class="active">
 				<a data-toggle="tab" href="#tab_1">
-				<i class="fa fa-briefcase"></i> Select or create project </a>
+				<i >St.1</i> Select or create project </a>
 				<span class="after">
 				</span>
 			</li>
 			<li>
 				<a data-toggle="tab" href="#tab_2">
-				<i class="fa fa-group"></i> Unadjusted Use Case Weight </a>
+				<i>St.2</i> Unadjusted Use Case Weight </a>
 			</li>
 			<li>
 				<a data-toggle="tab" href="#tab_3">
-				<i class="fa fa-leaf"></i> Unadjusted Actor Weight </a>
+				<i>St.3</i> Unadjusted Actor Weight </a>
 			</li>
 			<li>
 				<a data-toggle="tab" href="#tab_4">
-				<i class="fa fa-info-circle"></i> Technical Complexity Factor Cal </a>
+				<i>St.4</i> Technical Complexity Factor Cal </a>
 			</li>
 			<li>
 				<a data-toggle="tab" href="#tab_5">
-				<i class="fa fa-tint"></i> Environmental Complexity Factor Cal </a>
+				<i>St.5</i> Environmental Complexity Factor Cal </a>
 			</li>
 			<li>
 				<a data-toggle="tab" href="#tab_6">
-				<i class="fa fa-plus"></i> Comfim and result </a>
+				<i>St.6</i> Comfim and result </a>
 			</li>
 		</ul>
 	</div>
@@ -54,8 +54,8 @@
 										</select>
 										<span class="help-block">
 										Chose project </span>
-									</div>
-									<a href="javascript:;" class="btn green">
+									</div>	
+									<a data-toggle="modal" href="#responsive" class="btn green">
 									Create <i class="fa fa-plus"></i>
 									</a>
 								</div>
@@ -84,14 +84,13 @@
 								    <tbody>
 								    
 								      <tr>
-								        <td><input name="name" placeholder="Usecase simple"></td>
+								        <td><input name="name_uSimPle" placeholder="Usecase simple"></td>
 								        <td>
-								          <span data-remove><a href="#">D</a></span>
+								          <span data-remove><a href="#">X</a></span>
 								        </td>
 								      </tr>
 								    </tbody>
 							  </table>
-							  <p>abc</p>
 							  <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
 								    <thead>
 								      <tr>
@@ -101,9 +100,25 @@
 								    <tbody>
 					
 								      <tr>
-								        <td><input name="name" placeholder="Usecase Average"></td>
+								        <td><input name="name_uAverage" placeholder="Usecase Average"></td>
 								        <td>
-								          <span data-remove><a href="#">D</a></span>
+								          <span data-remove><a href="#">X</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+							   <table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+									    <tr>
+									      <th>Comlpex</th>
+									     </tr>
+								    </thead>
+								    <tbody>
+					
+								      <tr>
+								        <td><input name="name_uComlpex" placeholder="Usecase Comlpex"></td>
+								        <td>
+								          <span data-remove><a href="#">X</a></span>
 								        </td>
 								      </tr>
 								    </tbody>
@@ -127,15 +142,44 @@
 								<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
 								    <thead>
 								      <tr>
-								        <th>Name</th>
+								        <th>Actor Simple:</th>
 								      </tr>
 								    </thead>
 								    <tbody>
-								      <!-- The last <tr> in the <tbody> will be used as template for new rows -->
 								      <tr>
-								        <td><input name="name" placeholder="Joe Doe"></td>
+								        <td><input name="name_aSimple" placeholder="actor simple..."></td>
 								        <td>
-								          <span data-remove><a href="#">D</a></span>
+								          <span data-remove><a href="#">X</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+								<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Actor Average:</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td><input name="name_aAverage" placeholder="actor average..."></td>
+								        <td>
+								          <span data-remove><a href="#">x</a></span>
+								        </td>
+								      </tr>
+								    </tbody>
+							  </table>
+								<table data-editable data-editable-spy data-navigable-spy class="table table-hover table-striped">
+								    <thead>
+								      <tr>
+								        <th>Actor Complex</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td><input name="name_aComplex" placeholder="actor comlpex..."></td>
+								        <td>
+								          <span data-remove><a href="#">X</a></span>
 								        </td>
 								      </tr>
 								    </tbody>
@@ -146,48 +190,301 @@
 				</div>
 			</div>
 			<div id="tab_4" class="tab-pane">
-				<div id="accordion3" class="panel-group">
+				<div id="accordion4" class="panel-group">
 					<div class="panel panel-danger">
 						<div class="panel-heading">
-							<h4 class="panel-title">
-							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_1">
-							Unadjusted Actor Weight (UAW) </p>
-							</h4>
+							<h4 class="panel-title">Technical Complexity Factor (TCF)</h4>
 						</div>
-						<div id="accordion3_1" class="panel-collapse collapse in">
-							<div class="panel-body">
-								<div class="margin-bottom-10">
-									<select class="bs-select form-control" data-width="125px">
-										<option>Mustard</option>
-										<option>Ketchup</option>
-										<option>Relish</option>
-									</select>
-									 125px
+						<div id="accordion4_1" class="panel-collapse collapse in">
+							<div class="form-group">
+								<div class="col-md-6">
+									<div class="margin-bottom-10">
+										<select class="bs-select form-control " data-style="blue" id="distributed">
+											<option value="0">Distributed system level 0</option>
+											<option value="1">Distributed system level 1</option>
+											<option value="2">Distributed system level 2</option>
+											<option value="3">Distributed system level 3</option>
+											<option value="4">Distributed system level 4</option>
+											<option value="5">Distributed system level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="performance">
+											<option value="0">Performance objectives level 0</option>
+											<option value="1">Performance objectives level 1</option>
+											<option value="2">Performance objectives level 2</option>
+											<option value="3">Performance objectives level 3</option>
+											<option value="4">Performance objectives level 4</option>
+											<option value="5">Performance objectives level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="endUserefficiency">
+											<option value="0">End-user efficiency level 0</option>
+											<option value="1">End-user efficiency level 1</option>
+											<option value="2">End-user efficiency level 2</option>
+											<option value="3">End-user efficiency level 3</option>
+											<option value="4">End-user efficiency level 4</option>
+											<option value="5">End-user efficiency level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="complexProcessing">
+											<option value="0">Complex Processing level 0</option>
+											<option value="1">Complex Processing level 1</option>
+											<option value="2">Complex Processing level 2</option>
+											<option value="3">Complex Processing level 3</option>
+											<option value="4">Complex Processing level 4</option>
+											<option value="5">Complex Processing level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="easeofInstallation">
+											<option value="0">Ease of Installation level 0</option>
+											<option value="1">Ease of Installation level 1</option>
+											<option value="2">Ease of Installation level 2</option>
+											<option value="3">Ease of Installation level 3</option>
+											<option value="4">Ease of Installation level 4</option>
+											<option value="5">Ease of Installation level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="easeofUse">
+											<option value="0">Ease of Use level 0</option>
+											<option value="1">Ease of Use level 1</option>
+											<option value="2">Ease of Use level 2</option>
+											<option value="3">Ease of Use level 3</option>
+											<option value="4">Ease of Use level 4</option>
+											<option value="5">Ease of Use level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="portable">
+											<option value="0">Portable level 0</option>
+											<option value="1">Portable level 1</option>
+											<option value="2">Portable level 2</option>
+											<option value="3">Portable level 3</option>
+											<option value="4">Portable level 4</option>
+											<option value="5">Portable level 5</option>
+										</select>
+										
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="margin-bottom-10">
+										<select class="bs-select form-control " data-style="blue" id="easeofChange">
+											<option value="0">Ease of Change level 0</option>
+											<option value="1">Ease of Change level 1</option>
+											<option value="2">Ease of Change level 2</option>
+											<option value="3">Ease of Change level 3</option>
+											<option value="4">Ease of Change level 4</option>
+											<option value="5">Ease of Change level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="concurrentUse">
+											<option value="0">Concurrent Use level 0</option>
+											<option value="1">Concurrent Use level 1</option>
+											<option value="2">Concurrent Use level 2</option>
+											<option value="3">Concurrent Use level 3</option>
+											<option value="4">Concurrent Use level 4</option>
+											<option value="5">Concurrent Use level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="specialSecurity">
+											<option value="0">Special Security level 0</option>
+											<option value="1">Special Security level 1</option>
+											<option value="2">Special Security level 2</option>
+											<option value="3">Special Security level 3</option>
+											<option value="4">Special Security level 4</option>
+											<option value="5">Special Security level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="accessforThirdParties">
+											<option value="0">Access for Third Parties level 0</option>
+											<option value="1">Access for Third Parties level 1</option>
+											<option value="2">Access for Third Parties level 2</option>
+											<option value="3">Access for Third Parties level 3</option>
+											<option value="4">Access for Third Parties level 4</option>
+											<option value="5">Access for Third Parties level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="trainingNeeds">
+											<option value="0">Training Needs level 0</option>
+											<option value="1">Training Needs level 1</option>
+											<option value="2">Training Needs level 2</option>
+											<option value="3">Training Needs level 3</option>
+											<option value="4">Training Needs level 4</option>
+											<option value="5">Training Needs level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="reusableCode">
+											<option value="0">Reusable Code level 0</option>
+											<option value="1">Reusable Code level 1</option>
+											<option value="2">Reusable Code level 2</option>
+											<option value="3">Reusable Code level 3</option>
+											<option value="4">Reusable Code level 4</option>
+											<option value="5">Reusable Code level 5</option>
+										</select>
+									</div>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="tab_5" class="tab-pane">
-				<div id="accordion3" class="panel-group">
+				<div id="accordion5" class="panel-group">
 					<div class="panel panel-danger">
 						<div class="panel-heading">
-							<h4 class="panel-title">
-							<p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_1">
-							Unadjusted Actor Weight (UAW) </p>
-							</h4>
+							<h4 class="panel-title">Environmental Complexity Factor (ECF)</h4>
 						</div>
-						<div id="accordion3_1" class="panel-collapse collapse in">
+						<div class="panel-collapse collapse in">
 							<div class="panel-body">
-								<div class="margin-bottom-10">
-									<select class="bs-select form-control" data-width="125px">
-										<option>Mustard</option>
-										<option>Ketchup</option>
-										<option>Relish</option>
-									</select>
-									 125px
+								<div class="form-group">
+								<div class="col-md-6">
+									<div class="margin-bottom-10">
+										<select class="bs-select form-control " data-style="blue" id="familiarwithDevelopmentProcess">
+											<option value="0">Familiar with Development Process level 0</option>
+											<option value="1">Familiar with Development Process level 1</option>
+											<option value="2">Familiar with Development Process level 2</option>
+											<option value="3">Familiar with Development Process level 3</option>
+											<option value="4">Familiar with Development Process level 4</option>
+											<option value="5">Familiar with Development Process level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="applicationExperience">
+											<option value="0">Application Experience level 0</option>
+											<option value="1">Application Experience level 1</option>
+											<option value="2">Application Experience level 2</option>
+											<option value="3">Application Experience level 3</option>
+											<option value="4">Application Experience level 4</option>
+											<option value="5">Application Experience level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="objectOrientedExperience">
+											<option value="0">Object-Oriented Experience level 0</option>
+											<option value="1">Object-Oriented Experience level 1</option>
+											<option value="2">Object-Oriented Experience level 2</option>
+											<option value="3">Object-Oriented Experience level 3</option>
+											<option value="4">Object-Oriented Experience level 4</option>
+											<option value="5">Object-Oriented Experience level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="leadAnalystCapability">
+											<option value="0">Lead Analyst Capability level 0</option>
+											<option value="1">Lead Analyst Capability level 1</option>
+											<option value="2">Lead Analyst Capability level 2</option>
+											<option value="3">Lead Analyst Capability level 3</option>
+											<option value="4">Lead Analyst Capability level 4</option>
+											<option value="5">Lead Analyst Capability level 5</option>
+										</select>
+									</div>
 								</div>
+								<div class="col-md-6">
+									<div class="margin-bottom-10">
+										<select class="bs-select form-control " data-style="blue" id="motivation">
+											<option value="0">Motivation level 0</option>
+											<option value="1">Motivation level 1</option>
+											<option value="2">Motivation level 2</option>
+											<option value="3">Motivation level 3</option>
+											<option value="4">Motivation level 4</option>
+											<option value="5">Motivation level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="stableRequirements">
+											<option value="0">Stable Requirements level 0</option>
+											<option value="1">Stable Requirements level 1</option>
+											<option value="2">Stable Requirements level 2</option>
+											<option value="3">Stable Requirements level 3</option>
+											<option value="4">Stable Requirements level 4</option>
+											<option value="5">Stable Requirements level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="part-time-Staff">
+											<option value="0">Part-time Staff level 0</option>
+											<option value="1">Part-time Staff level 1</option>
+											<option value="2">Part-time Staff level 2</option>
+											<option value="3">Part-time Staff level 3</option>
+											<option value="4">Part-time Staff level 4</option>
+											<option value="5">Part-time Staff level 5</option>
+										</select>
+										<select class="bs-select form-control " data-style="blue" id="difficulProgrammingLanguage">
+											<option value="0">Difficult Programming Language level 0</option>
+											<option value="1">Difficult Programming Language level 1</option>
+											<option value="2">Difficult Programming Language level 2</option>
+											<option value="3">Difficult Programming Language level 3</option>
+											<option value="4">Difficult Programming Language level 4</option>
+											<option value="5">Difficult Programming Language level 5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tab_6" class="tab-pane">
+				<div id="accordion5" class="panel-group">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h4 class="panel-title">Result</h4>
+						</div>
+						<div class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<a class="dashboard-stat dashboard-stat-light blue-soft" href="javascript:;">
+									<div class="visual">
+										<i class="fa fa-comments"></i>
+									</div>
+									<div class="details">
+										<div class="desc">
+											Total Point
+										</div>
+										<div class="number">
+											 132,546.57
+										</div>
+										
+									</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+									<a class="dashboard-stat dashboard-stat-light red-soft" href="javascript:;">
+									<div class="visual">
+										<i class="fa fa-trophy"></i>
+									</div>
+									<div class="details">
+										<div class="desc">
+											 Total Hour
+										</div>
+										<div class="number">
+											 1,561.3
+										</div>
+									</div>
+									</a>
+								</div>
+								<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+									<a class="dashboard-stat dashboard-stat-light green-soft" href="javascript:;">
+									<div class="visual">
+										<i class="fa fa-shopping-cart"></i>
+									</div>
+									<div class="details">
+										<div class="desc">
+											 Total Cost
+										</div>
+										<div class="number">
+											 1,549,453.4$
+										</div>
+									</div>
+									</a>
+								</div>
+								<!-- BEGIN FORM-->
+								<form action="#" class="form-horizontal">
+									<div class="form-body">
+										<div class="form-group">
+											<label class="col-md-3 control-label">Hour per task</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control input-circle" placeholder="Enter hour">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-3 control-label">Payment</label>
+											<div class="col-md-4">
+												<div class="input-group">
+													<input type="email" class="form-control input-circle" placeholder="enter payment">
+												</div>
+											</div>
+										</div>
+									<div class="form-actions">
+										<div class="row">
+											<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn btn-circle blue">Preview</button>
+												<button type="submit" class="btn btn-circle blue">F	inish</button>
+												<button type="button" class="btn btn-circle default">Cancel</button>
+											</div>
+										</div>
+									</div>
+								</form>
+								<!-- END FORM-->
 							</div>
 						</div>
 					</div>
@@ -196,3 +493,40 @@
 		</div>
 	</div>
 </div>
+
+<!-- responsive -->
+	<div id="responsive" class="modal fade" tabindex="-1" data-width="900">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+			<h4 class="modal-title">Create New Project</h4>
+		</div>
+		<div class="modal-body">
+			<form role="form">
+				<div class="form-body">
+					<div class="form-group form-md-line-input form-md-floating-label">
+						<input type="text" class="form-control" id="form_control_1">
+						<label for="form_control_1">Project name:</label>
+						<span class="help-block">6-100 character, not use - / * + -</span>
+					</div>
+				
+					<div class="form-group form-md-line-input has-info">
+						<select class="form-control" id="form_control_2">
+							<option value=""></option>
+							<option value="">Web</option>
+							<option value="">Desktop</option>
+						</select>
+						<label for="form_control_2">Selct project type</label>
+					</div>
+					<div class="form-group form-md-line-input form-md-floating-label">
+						<textarea class="form-control" rows="3" id="form_control_3" ></textarea>
+						<label for="form_control_3">Description:</label>
+					</div>
+				</div>
+				
+			</form>
+
+		<div class="modal-footer">
+			<button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+			<button type="button" class="btn blue">CREATE</button>
+		</div>
+	</div>
