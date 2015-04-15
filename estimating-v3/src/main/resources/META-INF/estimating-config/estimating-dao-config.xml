@@ -11,19 +11,20 @@
 	</bean>  
 
 	<!-- Base Dao -->
-	<!-- <bean id="baseDao" abstract="true" class="com.estimating.dao.core.AbstractBaseDao" >
+	<bean id="baseDao" abstract="true" class="com.estimating.dao.core.AbstractBaseDao" >
 		<property name="resourcesDao" ref="resourcesDao"></property>
 		<property name="estimatingConstants" ref="estimatingConstants"></property>
 	</bean>
 		
-	Property	
+	<!-- Property	 -->
 	<bean name="estimatingConstants" class="com.estimating.utils.EstimatingConstants"></bean>
 	<bean id="resourcesDao" class="com.estimating.dao.core.ResourcesDao" lazy-init="true">
 		<property name="nameQuery" ref="${database.vendor}NameQuery"></property>
 	</bean>	
 	
-	Child class implement dao
+	<!-- Child class implement dao -->
 	<bean id="userDaoImpl" class="com.estimating.dao.impl.UserDaoImpl" parent="baseDao"/>
-	<bean id="customerDaoImpl" class="com.estimating.dao.impl.CustomerDaoImpl" parent="baseDao"/>
-	<bean id="departmentDaoImpl" class="com.estimating.dao.impl.DepartmentDaoImpl"/> -->
+	<bean id="projectDaoImpl" class="com.estimating.dao.impl.ProjectDaoImpl" parent="baseDao"/>
+	<bean id="useCasePointDaoImpl" class="com.estimating.dao.impl.UseCasePointDaoImpl" parent="baseDao"/>
+	<bean id="functionPointDaoImpl" class="com.estimating.dao.impl.FunctionPointDaoImpl" parent="baseDao"/>
 </beans>

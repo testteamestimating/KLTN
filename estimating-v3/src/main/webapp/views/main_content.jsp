@@ -22,6 +22,8 @@
 <link href="lib/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN PAGE LEVEL STYLES -->
+<link href="lib/assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css"/>
+<link href="lib/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="lib/assets/global/plugins/select2/select2.css"/>
 <link rel="stylesheet" type="text/css" href="lib/assets/global/plugins/bootstrap-select/bootstrap-select.min.css"/>
 <link rel="stylesheet" type="text/css" href="lib/assets/global/plugins/jquery-multi-select/css/multi-select.css"/>
@@ -86,6 +88,38 @@
 					<div class="col-md-12">
 						<div ui-view></div>
 					</div>
+					<div class="form-group">
+											<label class="control-label col-md-3">Metronic Styles</label>
+											<div class="col-md-9">
+												<div class="margin-bottom-10">
+													<select class="bs-select form-control input-small" data-style="blue">
+														<option>Mustard</option>
+														<option>Ketchup</option>
+														<option>Relish</option>
+													</select>
+													<select class="bs-select form-control input-small" data-style="green">
+														<option>Mustard</option>
+														<option>Ketchup</option>
+														<option>Relish</option>
+													</select>
+													<select class="bs-select form-control input-small" data-style="red">
+														<option>Mustard</option>
+														<option>Ketchup</option>
+														<option>Relish</option>
+													</select>
+													<select class="bs-select form-control input-small" data-style="yellow">
+														<option>Mustard</option>
+														<option>Ketchup</option>
+														<option>Relish</option>
+													</select>
+													<select class="bs-select form-control input-small" data-style="purple">
+														<option>Mustard</option>
+														<option>Ketchup</option>
+														<option>Relish</option>
+													</select>
+												</div>
+											</div>
+										</div>
 				</div>
 				<!-- END PAGE CONTENT-->
 			</div>
@@ -128,6 +162,8 @@
  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
  <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script> -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="lib/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+<script src="lib/assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
 <script type="text/javascript" src="lib/assets/global/plugins/select2/select2.min.js"></script>
 <script type="text/javascript" src="lib/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="lib/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
@@ -144,7 +180,7 @@
 
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<!-- <script src="lib/assets/admin/pages/scripts/table-editable.js"></script>
+<script src="lib/assets/admin/pages/scripts/table-editable.js"></script>
 <script src="lib/assets/admin/pages/scripts/components-dropdowns.js"></script>
 <script>
     jQuery(document).ready(function() {    
@@ -153,9 +189,10 @@
 		Demo.init(); // init demo features
 		TableEditable.init();
 		ComponentsDropdowns.init();
+		//UIExtendedModals.init();
 	});
        
-    </script>  -->
+    </script> 
     
 <!-- END JAVASCRIPTS -->
 </body>

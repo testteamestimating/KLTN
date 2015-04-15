@@ -41,6 +41,23 @@ public class Project extends BaseEntity {
 	@OneToMany(mappedBy = "project")
 	private List<FunctionPoint> functionPoints;
 	
+	@OneToMany(mappedBy = "project")
+	private List<Shared> shareds;
+	
+	/**
+	 * @return the shareds
+	 */
+	public List<Shared> getShareds() {
+		return shareds;
+	}
+
+	/**
+	 * @param shareds the shareds to set
+	 */
+	public void setShareds(List<Shared> shareds) {
+		this.shareds = shareds;
+	}
+
 	/**
 	 * @param projectName
 	 * @param description

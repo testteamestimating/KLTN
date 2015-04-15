@@ -96,7 +96,7 @@ public class UsecasePoint  extends BaseEntity {
 	 */
 	public UsecasePoint(Project project, WusWeight wusWeight,
 			WasWeight waWeight, TcfWeight tcfWeight, EfcWeight efcWeight,
-			List<UsecasePointProperties> usecaseProperties, int version,
+			 int version,
 			DateEmbedded date, double wasPoint, double wusPoint,
 			double tcfPoint, double efcPoint, double totalPoint,
 			double totalCost, double totalHour, int payment) {
@@ -106,7 +106,6 @@ public class UsecasePoint  extends BaseEntity {
 		this.waWeight = waWeight;
 		this.tcfWeight = tcfWeight;
 		this.efcWeight = efcWeight;
-		this.usecaseProperties = usecaseProperties;
 		this.version = version;
 		this.date = date;
 		this.wasPoint = wasPoint;

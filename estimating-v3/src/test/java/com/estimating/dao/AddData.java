@@ -60,9 +60,9 @@ public class AddData {
 	@Autowired IWasWeightDao wasWeightDao;
 	@Autowired IWusWeightDao wusWeightDao;
 	@Autowired ICommonTypeDao commonTypeDao;
-	@Autowired IEfcWeightDao efWeightcDao;
+	@Autowired IEfcWeightDao efcWeightcDao;
 	@Autowired IEifWeightDao eifWeightfDao;
-	@Autowired IEiWeightDao eiDWeightDao;
+	@Autowired IEiWeightDao eiWeightDao;
 	@Autowired IEoWeightDao eoWeightDao;
 	@Autowired IEqWeightDao eqWeightDao;
 	@Autowired IFunctionPointDao functionPointDao;
@@ -140,7 +140,7 @@ public class AddData {
 		int i=0;
 		while(i<10) {
 			lst.add(new EfcWeight(i+4,i+3,i+5,i+2,i+1,i+6,i+9,i+7));
-			efWeightcDao.create(lst.get(i));
+			efcWeightcDao.create(lst.get(i));
 			i++;
 		}
 	}
@@ -154,7 +154,7 @@ public class AddData {
 		int i=0;
 		while(i<10) {
 			lst.add(new EiWeight(i+12,i+6,i+9));
-			eiDWeightDao.create(lst.get(i));
+			eiWeightDao.create(lst.get(i));
 			i++;
 		}
 	}
@@ -257,28 +257,7 @@ public class AddData {
 		lst.add(new CommonType("aaverage"));
 		lst.add(new CommonType("acomplex"));
 		//8
-		lst.add(new CommonType("familiarwithDevelopmentProcess"));
-		lst.add(new CommonType("applicationExperience"));
-		lst.add(new CommonType("objectOrientedExperience"));
-		lst.add(new CommonType("leadAnalystCapability"));
-		lst.add(new CommonType("motivation"));
-		lst.add(new CommonType("stableRequirements"));
-		lst.add(new CommonType("parttimeStaff"));
-		lst.add(new CommonType("difficulProgrammingLanguage"));
-		//13
-		lst.add(new CommonType("access_for_3_parties"));
-		lst.add(new CommonType("complex_processing"));
-		lst.add(new CommonType("concurrent_use"));
-		lst.add(new CommonType("distributed_system"));
-		lst.add(new CommonType("easy_to_change"));
-		lst.add(new CommonType("easy_to_installation"));
-		lst.add(new CommonType("easy_to_use"));
-		lst.add(new CommonType("end_uses_efficiency"));
-		lst.add(new CommonType("performance_objectives"));
-		lst.add(new CommonType("portable"));
-		lst.add(new CommonType("reusable_code"));
-		lst.add(new CommonType("special_security"));
-		lst.add(new CommonType("training_needs"));
+		
 		
 		lst.add(new CommonType("eifSimple"));
 		lst.add(new CommonType("eifAverage"));
@@ -300,23 +279,8 @@ public class AddData {
 		lst.add(new CommonType("ilfAverage"));
 		lst.add(new CommonType("ilfComplex"));
 		
-		lst.add(new CommonType("dataCommunications"));
-		lst.add(new CommonType("distributedDataProcessing"));
-		lst.add(new CommonType("performance"));
-		lst.add(new CommonType("heavilyUsedConfiguration"));
-		lst.add(new CommonType("transactionRate"));
-		lst.add(new CommonType("onLineDataEntry"));
-		lst.add(new CommonType("endUserEfficiency"));
-		lst.add(new CommonType("onLineUpdate"));
-		lst.add(new CommonType("complexProcessing"));
-		lst.add(new CommonType("reusability"));
-		lst.add(new CommonType("installationEase"));
-		lst.add(new CommonType("operationalEase"));
-		lst.add(new CommonType("multipleSites"));
-		lst.add(new CommonType("facilitateChange"));
-		
 		int i = 0;
-		while(i<56) {
+		while(i<21) {
 			commonTypeDao.create(lst.get(i));
 			i++;
 		}
@@ -384,32 +348,10 @@ public class AddData {
 	@Test
 	public void addfuncionPoint() {
 		
-		ArrayList<FunctionPoint> lst = new ArrayList<FunctionPoint>();
-		ArrayList<Project> lstProject = new ArrayList<Project>();
-		ArrayList<EiWeight> lstEiWeight = new ArrayList<EiWeight>();
-		ArrayList<EoWeight> lstEoWeight = new ArrayList<EoWeight>();
-		ArrayList<IlfWeight> lstIlfWeight = new ArrayList<IlfWeight>();
-		ArrayList<EqWeight> lstEqWeight = new ArrayList<EqWeight>();
-		ArrayList<EifWeight> lstEifWeight = new ArrayList<EifWeight>();
-		ArrayList<VafWeight> lstVafWeight = new ArrayList<VafWeight>();
-		
-		int i =0;
-		while(i<10) {
-			//lst.add(new FunctionPoint(1,date,i+6.6,i+8.6,i+8.6,i+4.9,i+7.8,i+9.3,i+7.9,i+6.8,i+8.8,i*1000+12000));
-			lstProject.add(new Project());
-			lstEiWeight.add(new EiWeight(1,2,3));
-			lstEoWeight.add(new EoWeight(1,2,3));
-			lstIlfWeight.add(new IlfWeight(1,2,3));
-			lstEqWeight.add(new EqWeight(1,2,3));
-			lstEifWeight.add(new EifWeight(1,2,3));
-			lstVafWeight.add(new VafWeight());
-			lst.add(new FunctionPoint(lstProject.get(i), lstEiWeight.get(i), lstEoWeight.get(i), lstIlfWeight.get(i), lstEqWeight.get(i), lstEifWeight.get(i), 
-					lstVafWeight.get(i), i+1, date, i+55.6, i+87.9, i+87.9 , i+87.9, i+87.9, i+87.9, i+87.9, i+87.9, i+87.9, i+80));
-			lst.get(i).setEifWeight(new EifWeight(1,2,3));
-
-			functionPointDao.create(lst.get(i));
-			i++;
-		}
+		FunctionPoint f1 = new FunctionPoint(projectDao.findOneById(1), eiWeightDao.findOneById(2), eoWeightDao.findOneById(1), ilfWeightfDao.findOneById(1),
+				eqWeightDao.findOneById(1),eifWeightfDao.findOneById(1), vafWeightDao.findOneById(1), 
+				1, date, 12.3, 12.3, 12.3, 12.3, 12.3, 12.3, 12.3, 12.3, 12.3, 1);
+	functionPointDao.create(f1);
 	}
 	
 	
@@ -420,26 +362,71 @@ public class AddData {
 	@Test
 	public void addUsecasePoint() {
 		ArrayList<UsecasePoint> lst = new ArrayList<UsecasePoint>();
-		int i = 0;
-		while(i<10) {
-			lst.add(new UsecasePoint(i, date, i+1, i+54.7, i+22.6, i+99.12, i+56.8, i+44.9, i+45.3, i*100+12000));
-			usecasePointDao.create(lst.get(i));
-			i++;
-		}
+			lst.add(new UsecasePoint(projectDao.findOneById(1), wusWeightDao.findOneById(1), wasWeightDao.findOneById(1), tcfWeightDao.findOneById(1), efcWeightcDao.findOneById(1),
+					1, date, 123.1, 11.3, 12.4, 15.8, 123.5, 1234.9, 112.4, 123));
+			usecasePointDao.create(lst.get(0));
+			lst.add(new UsecasePoint(projectDao.findOneById(2), wusWeightDao.findOneById(2), wasWeightDao.findOneById(2), tcfWeightDao.findOneById(2), efcWeightcDao.findOneById(2),
+					1, date, 43.1, 23.3, 12.4, 15.8, 123.5, 1234.9, 112.4, 123));
+			usecasePointDao.create(lst.get(1));
+			lst.add(new UsecasePoint(projectDao.findOneById(3), wusWeightDao.findOneById(3), wasWeightDao.findOneById(4), tcfWeightDao.findOneById(2), efcWeightcDao.findOneById(1),
+					1, date, 67.1, 11.3, 12.4, 15.8, 11.5, 21.9, 12.4, 12));
+			usecasePointDao.create(lst.get(2));
 	}
 	
 	//*
 	@Test
 	public void addUsecasePointProerties() {
 		ArrayList<UsecasePointProperties> lst = new ArrayList<UsecasePointProperties>();
-		int i= 0;
-		while(i<10) {
-			//lst.add(new UsecasePointProperties(usecasePoint, commonType, ucppName))
+		lst.add(new UsecasePointProperties(usecasePointDao.findOneById(1), commonTypeDao.findOneById(1), "name 1"));
+		usecasePointPropertiesDao.create(lst.get(0));
+	}
+	
+	
+	@Test
+	public void findUserByName() {
+		Users user = new Users();
+		user = userDao.findOneByName("thanhlong");
+		System.out.println(user.getUsername());
+		System.out.println(user.getPassword());
+		System.out.println(user.getDate());
+	}
+	
+	@Test
+	public void findprojecbyname() {
+		Project project = new Project();
+		project = projectDao.findOneByName("Game pikachu");
+		System.out.println(project.getId());
+		System.out.println(project.getProjectName());
+		System.out.println(project.getUser());
+		System.out.println(project.getDescription());
+	}
+	
+	@Test
+	public void find() {
+		List<Users> users = new ArrayList<Users>();
+		users = userDao.findList(1);
+		for (Users users2 : users) {
+			System.out.println(users2.getUsername());
+			System.out.println(users2.getPassword());
 		}
 	}
 	
-
+	@Test
+	public void findlistproject() {
+		List<Project> projects = new ArrayList<Project>();
+		projects = projectDao.findListByUsername("vuhung");
+		for (Project project : projects) {
+			System.out.println(project.getProjectName());
+			
+		}
+	}
 	
-	
-	
+	@Test
+	public void findlistbytype() {
+		List<Project> projects = new ArrayList<Project>();
+		projects = projectDao.findListByType(1);
+		for (Project project : projects) {
+			System.out.println(project.getProjectName());
+		}
+	}
 }

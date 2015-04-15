@@ -31,6 +31,12 @@ public class Users  implements Serializable {
 	@JoinColumn(name = "utId")
 	private UserType userType;
 	
+	@OneToMany(mappedBy = "owner_user")
+	private List<Shared> owner_shares;
+	
+	@OneToMany(mappedBy = "share_user")
+	private List<Shared> share_user;
+	
 	@OneToMany(mappedBy = "user")
 	private List<Project> project;
 	
@@ -49,6 +55,9 @@ public class Users  implements Serializable {
 		this.date = date;
 		this.userType = userType;
 	}
+
+	
+
 
 
 
@@ -153,3 +162,7 @@ public class Users  implements Serializable {
 	}
 
 }
+
+
+
+

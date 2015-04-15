@@ -20,6 +20,7 @@ public class FunctionPointBean {
 	private double eiPoint;
 	private double lifPoint;
 	private double eoPoint;
+	private double eqPoint;
 	private double upPoint;
 	private double eifPoint;
 	private double vafPoint;
@@ -27,6 +28,7 @@ public class FunctionPointBean {
 	private double totalCost;
 	private double totalHour;
 	private int payment;
+	
 	/**
 	 * @param functionPointId
 	 * @param eiWeight
@@ -41,6 +43,7 @@ public class FunctionPointBean {
 	 * @param eiPoint
 	 * @param lifPoint
 	 * @param eoPoint
+	 * @param eqPoint
 	 * @param upPoint
 	 * @param eifPoint
 	 * @param vafPoint
@@ -52,9 +55,9 @@ public class FunctionPointBean {
 	public FunctionPointBean(int functionPointId, int eiWeight, int eoWeight,
 			int ilfWeight, int eqWeight, int eifWeight, int vafWeight,
 			int version, Timestamp createDate, Timestamp updateDate,
-			double eiPoint, double lifPoint, double eoPoint, double upPoint,
-			double eifPoint, double vafPoint, double totalPoint,
-			double totalCost, double totalHour, int payment) {
+			double eiPoint, double lifPoint, double eoPoint, double eqPoint,
+			double upPoint, double eifPoint, double vafPoint,
+			double totalPoint, double totalCost, double totalHour, int payment) {
 		super();
 		this.functionPointId = functionPointId;
 		this.eiWeight = eiWeight;
@@ -69,6 +72,7 @@ public class FunctionPointBean {
 		this.eiPoint = eiPoint;
 		this.lifPoint = lifPoint;
 		this.eoPoint = eoPoint;
+		this.eqPoint = eqPoint;
 		this.upPoint = upPoint;
 		this.eifPoint = eifPoint;
 		this.vafPoint = vafPoint;
@@ -166,6 +170,18 @@ public class FunctionPointBean {
 	 */
 	public void setVafWeight(int vafWeight) {
 		this.vafWeight = vafWeight;
+	}
+	/**
+	 * @return the eqPoint
+	 */
+	public double getEqPoint() {
+		return eqPoint;
+	}
+	/**
+	 * @param eqPoint the eqPoint to set
+	 */
+	public void setEqPoint(double eqPoint) {
+		this.eqPoint = eqPoint;
 	}
 	/**
 	 * @return the version
