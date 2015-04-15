@@ -42,7 +42,7 @@
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 
-<body ng-app="sampleApp" class="page-md page-boxed page-header-fixed page-container-bg-solid page-sidebar-closed-hide-logo" >
+<body ng-app="estimatingApp" class="page-md page-boxed page-header-fixed page-container-bg-solid page-sidebar-closed-hide-logo" >
 <!-- BEGIN HEADER -->
 <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
 	<!-- BEGIN HEADER INNER -->
@@ -177,6 +177,7 @@
 
 <!-- Estimating Javascript -->
 <script src="js/app.js" type="text/javascript"></script>
+<script src="js/project.js" type="text/javascript"></script>
 
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->

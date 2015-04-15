@@ -46,11 +46,12 @@
 									<label class="control-label col-md-3">Peoject's name:</label>
 									<div class="col-md-5">
 										<select class="form-control select2me" data-placeholder="Select...">
-											<option value="AL">Alabama</option>
+											<option ng-repeat="project in projects" value="{{project.id}}">{{project.projectName}}</option>
+											<!-- <option value="AL">Alabama</option>
 											<option value="WY">Wyoming</option>
 											<option value="WY">long</option>
 											<option value="WY">hung</option>
-											<option value="WY">hunh</option>
+											<option value="WY">hunh</option> -->
 										</select>
 										<span class="help-block">
 										Chose project </span>

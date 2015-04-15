@@ -1,7 +1,7 @@
 'use-strict'
-var sampleApp = angular.module('sampleApp', ['ui.router']);
+var app = angular.module('estimatingApp', ['ui.router']);
 
-sampleApp.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.otherwise('/home');
     
@@ -10,7 +10,8 @@ sampleApp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('usecase_cal', {
             url: '/usecase-cal',
-            templateUrl: 'views/usecase_cal.html'
+            templateUrl: 'views/usecase_cal.html',
+            controller: 'productCtrl'
         })
         
         // nested list with custom controller
