@@ -4,6 +4,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class AbstractRestService {
 	protected String urlUseCasePoint = "http://localhost:8080/estimating-rest-ws/usecasepoint/";
+	protected String urlFunctionPoint = "http://localhost:8080/estimating-rest-ws/functionpoint/";
 	RestTemplate restTemplate;
 
 	/**

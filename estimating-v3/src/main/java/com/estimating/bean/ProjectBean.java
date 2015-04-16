@@ -8,35 +8,25 @@ public class ProjectBean implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String projectType;
 	private String projectName;
 	private String description;
 	private int id;
 	private String username;
+	private int projectTypeId;
 
 	public ProjectBean() {
 		super();
 	}
 	
-	public ProjectBean(String projectType, String projectName, String description,
+	public ProjectBean(String projectName, String description,
 			int projectId, String username) {
 		super();
-		this.projectType = projectType;
 		this.projectName = projectName;
 		this.description = description;
 		this.id = projectId;
 		this.username = username;
 	}
 
-
-
-	public String getProjectType() {
-		return projectType;
-	}
-
-	public void setProjectType(String projectType) {
-		this.projectType = projectType;
-	}
 
 	public String getProjectName() {
 		return projectName;
@@ -68,5 +58,13 @@ public class ProjectBean implements Serializable {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public int getProjectTypeId() {
+		return projectTypeId;
+	}
+
+	public void setProjectTypeId(int projectTypeId) {
+		this.projectTypeId = projectTypeId;
 	}
 }

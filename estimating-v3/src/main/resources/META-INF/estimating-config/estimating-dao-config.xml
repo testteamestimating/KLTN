@@ -25,4 +25,5 @@
 	<!-- Child class implement dao -->
 	<bean id="userDaoImpl" class="com.estimating.dao.impl.UserDaoImpl" parent="baseDao"/>
 	<bean id="projectDaoImpl" class="com.estimating.dao.impl.ProjectDaoImpl" parent="baseDao"/>
+	<bean id="projectTypeDaoImpl" class="com.estimating.dao.impl.ProjectTypeDaoImpl" parent="baseDao"/>
 </beans>

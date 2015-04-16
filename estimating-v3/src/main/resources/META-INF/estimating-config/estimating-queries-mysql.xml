@@ -14,6 +14,14 @@
 						]]>
 					</value>
 				</entry>
+				<!-- USER -->
+				<entry key="findListUserByUserName">
+					<value>
+						<![CDATA[
+							SELECT * FROM users WHERE where ut_id > :id;
+						]]>
+					</value>
+				</entry>
 				<!-- END USER -->
 				
 				<!-- CUSTOMER -->
@@ -21,6 +29,96 @@
 					<value>
 						<![CDATA[
 							SELECT * FROM customers WHERE customer_name = :customername	
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find project by name  -->
+				<entry key="findProjectByName">
+					<value>
+						<![CDATA[
+							SELECT * FROM project where project_name = :projectname
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project by name  -->
+				<entry key="findListProjectByName">
+					<value>
+						<![CDATA[
+							SELECT * FROM project where username like CONCAT('%', :username, '%')
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project by type  -->
+				<entry key="findListProjectByType">
+					<value>
+						<![CDATA[
+							SELECT * FROM project where project_type = :type
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project usecase point estimated by username  -->
+				<entry key="findListProjectUCPByUserName">
+					<value>
+						<![CDATA[
+							SELECT * FROM project inner join usecase_point on project.p_id = usecase_point.project where username = :username
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project function point estimated by username  -->
+				<entry key="findListProjectFPByUserName">
+					<value>
+						<![CDATA[
+							SELECT * FROM project inner join function_point on project.p_id = function_point.project where username = :username
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project share by user  -->
+				<entry key="findListProjectShareByUser">
+					<value>
+						<![CDATA[
+							select * from project inner join shared on project.p_id = shared.project_id where owner_user like '% ? %'
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project share to user  -->
+				<entry key="findListProjectShareToUser">
+					<value>
+						<![CDATA[
+							select * from project inner join shared on project.p_id = shared.project_id where share_user = :username
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project user share to user  -->
+				<entry key="findListProjectUserShareToUser">
+					<value>
+						<![CDATA[
+							select * from project inner join shared on project.p_id = shared.project_id where owner_user = :owner_user and share_user = :share_user
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project user share to user  -->
+				<entry key="findListProjectOfUserVipByUsername">
+					<value>
+						<![CDATA[
+							select * from project inner join users on project.username = users.username where users.ut_id = 2 and users.username = :username
+						]]>
+					</value>
+				</entry>
+				
+				<!-- find list project user share to user  -->
+				<entry key="findListProjectOfUserRegularByUsername">
+					<value>
+						<![CDATA[
+							select * from project inner join users on project.username = users.username where users.ut_id = 1 and users.username = :username
 						]]>
 					</value>
 				</entry>

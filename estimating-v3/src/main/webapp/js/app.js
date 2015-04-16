@@ -11,7 +11,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('usecase_cal', {
             url: '/usecase-cal',
             templateUrl: 'views/usecase_cal.html',
-            controller: 'productCtrl'
+            controller: 'projectCtrl'
         })
         
         // nested list with custom controller

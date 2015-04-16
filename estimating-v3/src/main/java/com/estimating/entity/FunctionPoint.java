@@ -118,44 +118,9 @@ public class FunctionPoint extends BaseEntity {
 		this.funtionPointProperties = funtionPointProperties;
 	}
 
-	/**
-	 * @param eiWeight
-	 * @param ilfWeight
-	 * @param eoWeight
-	 * @param eqWeight
-	 * @param eifWeight
-	 * @param vafWeight
-	 * @param version
-	 * @param date
-	 * @param eiPoint
-	 * @param lifPoint
-	 * @param eoPoint
-	 * @param upPoint
-	 * @param eifPoint
-	 * @param vafPoint
-	 * @param totalPoint
-	 * @param totalCost
-	 * @param totalHour
-	 * @param payment
-	 */
-	/*public FunctionPoint(int version, DateEmbedded date,
-			double eiPoint, double lifPoint, double eoPoint, double upPoint,
-			double eifPoint, double vafPoint, double totalPoint,
-			double totalCost, double totalHour, int payment) {
-		super();
-		this.version = version;
-		this.date = date;
-		this.eiPoint = eiPoint;
-		this.lifPoint = lifPoint;
-		this.eoPoint = eoPoint;
-		this.upPoint = upPoint;
-		this.eifPoint = eifPoint;
-		this.vafPoint = vafPoint;
-		this.totalPoint = totalPoint;
-		this.totalCost = totalCost;
-		this.totalHour = totalHour;
-		this.payment = payment;
-	}*/
+	
+
+
 
 	/**
 	 * @param project
@@ -165,7 +130,6 @@ public class FunctionPoint extends BaseEntity {
 	 * @param eqWeight
 	 * @param eifWeight
 	 * @param vafWeight
-	 * @param funtionPointProperties
 	 * @param version
 	 * @param date
 	 * @param eiPoint
@@ -181,10 +145,10 @@ public class FunctionPoint extends BaseEntity {
 	 */
 	public FunctionPoint(Project project, EiWeight eiWeight, EoWeight eoWeight,
 			IlfWeight ilfWeight, EqWeight eqWeight, EifWeight eifWeight,
-			VafWeight vafWeight, int version,
-			DateEmbedded date, double eiPoint, double lifPoint, double eoPoint,
-			double upPoint, double eifPoint, double vafPoint,
-			double totalPoint, double totalCost, double totalHour, int payment) {
+			VafWeight vafWeight, int version, DateEmbedded date,
+			double eiPoint, double lifPoint, double eoPoint, double upPoint,
+			double eifPoint, double vafPoint, double totalPoint,
+			double totalCost, double totalHour, int payment) {
 		super();
 		this.project = project;
 		this.eiWeight = eiWeight;

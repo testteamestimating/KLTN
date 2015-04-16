@@ -8,35 +8,12 @@ import org.springframework.stereotype.Service;
 
 import com.estimating.bean.ProjectBean;
 import com.estimating.entity.Project;
+import com.estimating.entity.ProjectType;
 import com.estimating.service.core.AbstractBaseService;
 import com.estimating.service.core.IProjectService;
 
 @Service
-public class ProjectServiceImpl extends AbstractBaseService<ProjectBean> implements IProjectService {
-
-	@Override
-	public void create(ProjectBean entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void update(ProjectBean entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void remove(ProjectBean entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public ProjectBean findOneById(Long primaryKey) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class ProjectServiceImpl extends AbstractBaseService implements IProjectService {
 
 	@Override
 	public List<ProjectBean> findAll() {
@@ -55,4 +32,16 @@ public class ProjectServiceImpl extends AbstractBaseService<ProjectBean> impleme
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public ProjectBean create(ProjectBean projectBean) {
+		Project project = new Project();
+		project.setProjectName(projectBean.getProjectName());
+		project.setDescription(projectBean.getDescription());
+		ProjectType projectType = projectTypeDao.findOneById(projectBean.getProjectTypeId());
+		project.setProjectType(projectType);
+		projectDao.create(project);
+		return projectBean;
+	}
+
 }
